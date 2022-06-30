@@ -1,0 +1,189 @@
+body {
+  background-color: #000;
+  margin-right: 3em;
+  margin-left: 3em;
+}
+
+.sort-button {
+  background-color: transparent;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 246px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin-left: auto;
+  margin-top: 61px;
+}
+
+.sort-button p {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: #ffffff;
+  margin-left: 0.8em;
+}
+
+.fa-angle-down {
+  margin-right: 0.8em;
+}
+
+.main-div {
+  display: flex;
+  margin-top: 1em;
+}
+
+.currency,
+.availability,
+.price-range {
+  height: 20px;
+  font-family: 'Termina';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 0.7em;
+}
+
+.left-div > div {
+  margin-bottom: 3em;
+}
+
+.eth-usd-div {
+  display: flex;
+}
+
+.eth {
+  width: 123px;
+  height: 50px;
+  background: #eb5f33;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.usd {
+  box-sizing: border-box;
+  width: 123px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid #ffffff;
+  border-left: none;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.eth-usd-div span {
+  width: 43px;
+  height: 16px;
+  font-family: 'Termina';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.availability-div {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 246px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin-bottom: 0.7em;
+}
+
+.circle-button {
+  background-color: transparent;
+  border: none;
+}
+
+.outer-circle {
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #eb5f33;
+  margin-left: 0.7em;
+}
+.inner-circle {
+  position: absolute;
+  border-radius: 50%;
+  margin: 4px 0px 0px 4px;
+  width: 20px;
+  height: 20px;
+  background: #eb5f33;
+}
+
+.all,
+.buy-now {
+  font-family: 'Termina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #ffffff;
+  margin-left: 0.7em;
+}
+
+.price-range-div {
+  display: flex;
+}
+
+.min,
+.max {
+  box-sizing: border-box;
+  width: 120px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.min {
+  margin-right: 6px;
+}
+
+.price-range-div h5 {
+  width: 42px;
+  height: 16px;
+  font-family: 'Termina';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.price-range-div h6 {
+  width: 26px;
+  height: 16px;
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.right-div {
+  display: flex;
+}
+
+.h1 {
+  color: white;
+}
