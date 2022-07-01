@@ -1,7 +1,7 @@
 body {
   background-color: #000;
-  margin-right: 3em;
-  margin-left: 3em;
+  margin-right: 10em;
+  margin-left: 10em;
 }
 
 .sort-button {
@@ -20,7 +20,7 @@ body {
 }
 
 .sort-button p {
-  font-family: 'Proxima Nova';
+  font-family: 'Kantumruy Pro', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -43,7 +43,7 @@ body {
 .availability,
 .price-range {
   height: 20px;
-  font-family: 'Termina';
+  font-family: 'Red Hat Display', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -52,7 +52,10 @@ body {
   margin-top: 0;
   margin-bottom: 0.7em;
 }
-
+.left-div {
+  /* margin-right: 1.5em; */
+  width: 25%;
+}
 .left-div > div {
   margin-bottom: 3em;
 }
@@ -81,7 +84,7 @@ body {
 .eth-usd-div span {
   width: 43px;
   height: 16px;
-  font-family: 'Termina';
+  font-family: 'Red Hat Display', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -101,6 +104,10 @@ body {
   border: 1px solid #ffffff;
   border-radius: 10px;
   margin-bottom: 0.7em;
+}
+
+.availability-div p {
+  margin-bottom: 0;
 }
 
 .circle-button {
@@ -128,7 +135,7 @@ body {
 
 .all,
 .buy-now {
-  font-family: 'Termina';
+  font-family: 'Red Hat Display', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -157,10 +164,17 @@ body {
   margin-right: 6px;
 }
 
+.min h5,
+.min h6,
+.max h5,
+.max h6 {
+  margin-bottom: 0;
+}
+
 .price-range-div h5 {
   width: 42px;
   height: 16px;
-  font-family: 'Termina';
+  font-family: 'Red Hat Display', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -171,7 +185,7 @@ body {
 .price-range-div h6 {
   width: 26px;
   height: 16px;
-  font-family: 'Proxima Nova';
+  font-family: 'Kantumruy Pro', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -182,8 +196,126 @@ body {
 
 .right-div {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  width: 75%;
 }
 
-.h1 {
-  color: white;
+.item-div {
+  box-sizing: border-box;
+  height: fit-content;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  width: 30%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+}
+
+.item-div img {
+  border-radius: 20px;
+  width: 90%;
+  margin: 5%;
+}
+
+.item-name-div {
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+}
+.item-name-div div {
+  display: flex;
+}
+.fa-circle-check {
+  color: #eb5f33;
+  font-size: 12px;
+  margin-left: 0.5em;
+}
+
+.item-price-div {
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 50%;
+}
+
+.item-description-div {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.item-utility-div {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-div h5 {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #000000;
+}
+
+.item-name-div p {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0.5;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  max-inline-size: 100%;
+  overflow-wrap: break-word;
+}
+
+.item-price-div p {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #eb5f33;
+}
+
+.item-utility-div p {
+  font-family: 'Kantumruy Pro', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #000000;
+  opacity: 0.5;
+}
+
+.item-description-div p,
+.item-description-div h5,
+.item-utility-div p,
+.item-utility-div h5 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.spinner-div {
+  width: 75%;
+  display: flex;
+  justify-content: end;
+  margin-top: 2em;
 }
