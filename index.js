@@ -1,31 +1,28 @@
+const listItems = document.querySelector('.item-list-div')
+const spinner = document.querySelector('.infinite-spinner-div')
 
-(function ()
+const getItems = async () =>
 {
-    const listItems = document.querySelector('.item-list-div')
-    const spinner = document.querySelector('.infinite-spinner-div')
-
-    const getItems = async () =>
+    const API_URL = 'https://mdatsev.dev/token-api?offset=0&limit=10';
+    const response = await fetch(API_URL);
+    // handle 404
+    if (!response.ok)
     {
-        const API_URL = 'https://mdatsev.dev/token-api?offset=0&limit=10';
-        const response = await fetch(API_URL);
-        // handle 404
-        if (!response.ok)
-        {
-            throw new Error(`An error occurred: ${response.status}`);
-        }
-        return await response.json();
+        throw new Error(`An error occurred: ${response.status}`);
     }
+    return await response.json();
+}
 
-    const showItems = (items) =>
+const showItems = (items) =>
+{
+
+    console.log(items);
+    items.map(item =>
     {
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('item-div');
 
-        console.log(items);
-        items.map(item =>
-        {
-            const itemDiv = document.createElement('div');
-            itemDiv.classList.add('item-div');
-
-            itemDiv.innerHTML = `
+        itemDiv.innerHTML = `
             <div class='item-image-div'>
                 <img id='img' src="${item.image}" alt="NFT image" >
             </div >
@@ -49,44 +46,44 @@
             </div>
             `;
 
-            listItems.appendChild(itemDiv);
-        });
-    };
+        listItems.appendChild(itemDiv);
+    });
+};
 
-    const hideLoader = () =>
+const hideLoader = () =>
+{
+    spinner.classList.add('d-none');
+};
+
+const showLoader = () =>
+{
+    spinner.classList.add('show');
+};
+
+const loadItems = async () =>
+{
+    showLoader();
+
+    try
     {
-        spinner.classList.add('d-none');
-    };
-
-    const showLoader = () =>
+        const response = await getItems();
+        showItems(response.result);
+    } catch (error)
     {
-        spinner.classList.add('show');
-    };
-
-    const loadItems = async () =>
+        console.log(error.message);
+        hideLoader()
+        loadItems()
+    } finally
     {
-        showLoader();
+        hideLoader();
+    }
+};
 
-        try
-        {
-            const response = await getItems();
-            showItems(response.result);
-        } catch (error)
-        {
-            console.log(error.message);
-            hideLoader()
-            loadItems()
-        } finally
-        {
-            hideLoader();
-        }
-    };
+window.addEventListener('scroll', () => { loadItems() }, { passive: true }
+);
 
-    window.addEventListener('scroll', () => { loadItems() }, { passive: true }
-    );
+// initialize
+window.onload = loadItems();
 
-    // initialize
-    loadItems();
-})();
 
 

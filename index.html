@@ -37,22 +37,24 @@
                         <span>USD</span>
                     </button>
                 </div>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active eth">
+                        <input type="radio" name="options" id="option1" checked> ETH
+                    </label>
+                    <label class="btn btn-secondary usd">
+                        <input type="radio" name="options" id="option2"> USD
+                    </label>
+                </div>
             </div>
             <div>
                 <h4 class="availability">Avaibility</h4>
                 <div class="availability-div">
-                    <button class="circle-button">
-                        <div class="outer-circle">
-                            <div class="inner-circle"></div>
-                        </div>
-                    </button>
-                    <p class="all">All</p>
+                    <input type="radio" name="availability" value="all">
+                    <label for="age1" class="all">All</label>
                 </div>
                 <div class="availability-div">
-                    <button class="circle-button">
-                        <div class="outer-circle"></div>
-                    </button>
-                    <p class="buy-now">Buy now</p>
+                    <input type="radio" name="availability" value="buynow">
+                    <label for="age2" class="buy-now">Buy now</label><br>
                 </div>
             </div>
             <div>
@@ -68,24 +70,6 @@
                         <input type="number">
                         <h5>ETH</h5>
                     </div>
-                    <!-- <div class="input-group min">
-                        <div>
-                            <span class="input-group-text">Min</span>
-                        </div>
-                        <input type="number" class="form-control">
-                        <div class="input-group-append">
-                            <span class="input-group-text">ETH</span>
-                        </div>
-                    </div>
-                    <div class="input-group max">
-                        <div>
-                            <span class="input-group-text">Max</span>
-                        </div>
-                        <input type="text" class="form-control">
-                        <div class="input-group-append">
-                            <span class="input-group-text">ETH</span>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>

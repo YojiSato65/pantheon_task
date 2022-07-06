@@ -19,6 +19,10 @@ body {
   margin-top: 61px;
 }
 
+.sort-button:active {
+  background-color: rgb(27, 27, 27);
+}
+
 .sort-button p {
   font-family: 'Kantumruy Pro', sans-serif;
   font-style: normal;
@@ -115,22 +119,18 @@ body {
   border: none;
 }
 
-.outer-circle {
-  border-radius: 50%;
-  position: relative;
-  box-sizing: border-box;
+input[name='availability'] {
+  appearance: none;
   width: 30px;
   height: 30px;
   border: 1px solid #eb5f33;
+  border-radius: 50%;
+  background-clip: content-box;
+  padding: 5px;
   margin-left: 0.7em;
 }
-.inner-circle {
-  position: absolute;
-  border-radius: 50%;
-  margin: 4px 0px 0px 4px;
-  width: 20px;
-  height: 20px;
-  background: #eb5f33;
+input[name='availability']:checked {
+  background-color: #eb5f33;
 }
 
 .all,
@@ -142,16 +142,17 @@ body {
   line-height: 100%;
   color: #ffffff;
   margin-left: 0.7em;
+  margin-bottom: 0;
 }
 
 .price-range-div {
   display: flex;
+  width: 246px;
 }
 
 .min,
 .max {
   box-sizing: border-box;
-  width: 120px;
   height: 50px;
   border: 1px solid #ffffff;
   border-radius: 10px;
@@ -181,8 +182,8 @@ body {
   line-height: 100%;
   text-transform: uppercase;
   color: #ffffff;
-  margin-left: 0.2em;
-  margin-right: 0.2em;
+  margin-left: 0.4em;
+  margin-right: 0.4em;
 }
 .price-range-div h6 {
   width: 26px;
@@ -194,8 +195,8 @@ body {
   line-height: 100%;
   color: #ffffff;
   opacity: 0.5;
-  margin-right: 0.2em;
-  margin-left: 0.2em;
+  margin-right: 0.4em;
+  margin-left: 0.4em;
 }
 
 .price-range-div input {
