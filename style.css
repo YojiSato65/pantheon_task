@@ -181,6 +181,8 @@ body {
   line-height: 100%;
   text-transform: uppercase;
   color: #ffffff;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
 }
 .price-range-div h6 {
   width: 26px;
@@ -192,6 +194,28 @@ body {
   line-height: 100%;
   color: #ffffff;
   opacity: 0.5;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+}
+
+.price-range-div input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+}
+.price-range-div input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .right-div {
@@ -202,7 +226,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
-  /* width: 75%; */
 }
 
 .item-div {
@@ -325,12 +348,7 @@ body {
   opacity: 0;
 }
 .infinite-spinner-div {
-  /* width: 75%; */
   display: flex;
   justify-content: center;
   margin-top: 2em;
 }
-/* 
-.infinite-spinner-div {
-  opacity: 0;
-} */
