@@ -64,39 +64,52 @@ body {
   margin-bottom: 3em;
 }
 
-.eth-usd-div {
+/* radio toggle button */
+.switch-field {
   display: flex;
 }
 
-.eth {
-  width: 123px;
-  height: 50px;
-  background: #eb5f33;
-  border-radius: 10px 0px 0px 10px;
+.switch-field input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+  padding-top: 13px;
 }
 
-.usd {
-  box-sizing: border-box;
-  width: 123px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid #ffffff;
-  border-left: none;
-  border-radius: 0px 10px 10px 0px;
-}
-
-.eth-usd-div span {
-  width: 43px;
-  height: 16px;
+.switch-field label {
   font-family: 'Red Hat Display', sans-serif;
   font-style: normal;
   font-weight: 600;
+  background-color: transparent;
+  color: white;
+  width: 123px;
+  height: 50px;
   font-size: 16px;
-  line-height: 100%;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-right: auto;
-  margin-left: auto;
+  text-align: center;
+  padding-top: 12px;
+  margin-bottom: 0;
+  border: 1px solid rgba(255, 255, 255);
+  transition: all 0.1s ease-in-out;
+}
+
+.switch-field label:hover {
+  cursor: pointer;
+}
+
+.switch-field input:checked + label {
+  background-color: #eb5f33;
+  border: none;
+}
+
+.switch-field label:first-of-type {
+  border-radius: 10px 0 0 10px;
+}
+
+.switch-field label:last-of-type {
+  border-radius: 0 10px 10px 0;
 }
 
 .availability-div {
